@@ -6,6 +6,7 @@ package arc.validator.customize;
 
 import javax.validation.Constraint;
 import javax.validation.Payload;
+import javax.validation.ReportAsSingleViolation;
 import java.lang.annotation.Documented;
 import java.lang.annotation.Retention;
 import java.lang.annotation.Target;
@@ -21,6 +22,7 @@ import static java.lang.annotation.RetentionPolicy.RUNTIME;
 @Retention(RUNTIME)
 @Documented
 @Constraint(validatedBy = {NameDuplicatedValidator.class})
+@ReportAsSingleViolation
 public @interface NameDuplicated {
     String message() default "{validate.user.name.duplicate}";
 

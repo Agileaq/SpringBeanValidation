@@ -52,6 +52,5 @@ public class AppConfig {
                 "classpath:i18n/validation"
         );
         return messageSource;
-
     }
 }
